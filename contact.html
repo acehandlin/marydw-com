@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mary DW</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(74, 20, 140, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2d1b4e;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(74, 20, 140, 0.2);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4a148c;
+            box-shadow: 0 0 0 3px rgba(74, 20, 140, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #4a148c, #663399);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(74, 20, 140, 0.3);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 20, 140, 0.4);
+        }
+
+        .contact-info h3 {
+            color: #4a148c;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            color: #2d1b4e;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-method .icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 2rem;
+            text-align: center;
+        }
+
+        .contact-method .details {
+            flex: 1;
+        }
+
+        .contact-method .label {
+            font-weight: 600;
+            color: #4a148c;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-method .value {
+            color: #2d1b4e;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flower-accent flower-1"></div>
+    <div class="flower-accent flower-2"></div>
+    <div class="flower-accent flower-3"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Mary DW</a></div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Let's Create Together</h1>
+            <p>I'd love to hear about your project and explore how we can bring your vision to life</p>
+        </section>
+
+        <div class="contact-grid">
+            <div class="contact-form">
+                <h2 style="color: #4a148c; margin-bottom: 1.5rem;">Start the Conversation</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type">Project Type</label>
+                        <select id="project-type" name="project-type">
+                            <option value="">Select a project type</option>
+                            <option value="brand-identity">Brand Identity</option>
+                            <option value="web-design">Web Design</option>
+                            <option value="print-design">Print Design</option>
+                            <option value="packaging">Packaging Design</option>
+                            <option value="campaign">Campaign Design</option>
+                            <option value="consultation">Design Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-5k">Under $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-plus">$25,000+</option>
+                            <option value="discuss">Let's discuss</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Ideal Timeline</label>
+                        <input type="text" id="timeline" name="timeline" placeholder="e.g., 6-8 weeks">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell me about your project</label>
+                        <textarea id="message" name="message" placeholder="What's your vision? What challenges are you facing? What excites you most about this project?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="section-card">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always excited to connect with new people and discuss potential collaborations. Whether you have a fully formed project brief or just the seed of an idea, I'd love to hear from you.</p>
+
+                    <div class="contact-method">
+                        <div class="icon">✉️</div>
+                        <div class="details">
+                            <div class="label">Email</div>
+                            <div class="value">hello@marydw.com</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="icon">📞</div>
+                        <div class="details">
+                            <div class="label">Phone</div>
+                            <div class="value">Available upon request</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="icon">📍</div>
+                        <div class="details">
+                            <div class="label">Location</div>
+                            <div class="value">Available for remote & local projects</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="icon">⏰</div>
+                        <div class="details">
+                            <div class="label">Response Time</div>
+                            <div class="value">Usually within 24 hours</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card" style="margin-top: 2rem;">
+                    <h3>What to Expect</h3>
+                    <p>When you reach out, I'll respond personally within 24 hours (usually much sooner!). We'll start with a conversation about your goals, timeline, and vision.</p>
+                    <p>If it seems like we're a good fit, I'll put together a detailed proposal with timeline, process, and investment information. No pressure, no pushy sales tactics—just honest conversation about how we might create something beautiful together.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card" style="text-align: center; margin-top: 3rem;">
+            <h2>Not Ready for a Project Yet?</h2>
+            <p>That's perfectly fine! I love connecting with fellow creatives, potential collaborators, and anyone who shares a passion for thoughtful design. Feel free to reach out just to say hello—I promise to respond with genuine enthusiasm!</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:hello@marydw.com" aria-label="Email">✉</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+            <p>&copy; 2024 Mary DW. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

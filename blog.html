@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mary DW</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .blog-post {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(74, 20, 140, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(74, 20, 140, 0.2);
+        }
+
+        .blog-header {
+            height: 150px;
+            background: linear-gradient(135deg, #d4c5ff, #b39ddb, #9c27b0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-date {
+            font-size: 0.9rem;
+            color: #4a148c;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            color: #2d1b4e;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            color: #2d1b4e;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: #4a148c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #663399;
+        }
+
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 2rem;
+        }
+
+        .featured-header {
+            background: linear-gradient(135deg, #4a148c, #663399, #8e24aa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .featured-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-header {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flower-accent flower-1"></div>
+    <div class="flower-accent flower-2"></div>
+    <div class="flower-accent flower-3"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Mary DW</a></div>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Thoughts & Reflections</h1>
+            <p>Musings on creativity, design, and the beautiful moments in between</p>
+        </section>
+
+        <div class="blog-grid">
+            <article class="blog-post featured-post">
+                <div class="featured-header">✨</div>
+                <div class="featured-content">
+                    <div class="blog-date">November 15, 2024</div>
+                    <h2 class="blog-title">Finding Magic in Mundane Moments</h2>
+                    <p class="blog-excerpt">Yesterday, while waiting for my morning coffee to brew, I noticed how the steam created these delicate, ephemeral patterns against the kitchen window. It reminded me that inspiration doesn't always come from grand gestures or perfect conditions—sometimes it whispers to us in the quiet, ordinary moments we often overlook.</p>
+                    <a href="#" class="read-more">Continue reading →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-header">🎨</div>
+                <div class="blog-content">
+                    <div class="blog-date">November 8, 2024</div>
+                    <h3 class="blog-title">The Psychology of Purple: Why It's More Than Just My Favorite Color</h3>
+                    <p class="blog-excerpt">Purple has been my constant companion since childhood, but it wasn't until recently that I discovered the fascinating psychology behind this enigmatic hue. From royalty to spirituality, creativity to mystery...</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-header">🌿</div>
+                <div class="blog-content">
+                    <div class="blog-date">October 28, 2024</div>
+                    <h3 class="blog-title">Sustainable Design: Beauty with Purpose</h3>
+                    <p class="blog-excerpt">As designers, we have a responsibility that extends beyond aesthetics. Every choice we make—from paper selection to digital optimization—impacts our planet. Here's how I'm making my practice more sustainable...</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-header">📖</div>
+                <div class="blog-content">
+                    <div class="blog-date">October 15, 2024</div>
+                    <h3 class="blog-title">Books That Changed How I See Design</h3>
+                    <p class="blog-excerpt">Literature and design might seem like separate worlds, but some books have profoundly influenced my visual work. From Virginia Woolf's stream of consciousness to Italo Calvino's invisible cities...</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-header">☕</div>
+                <div class="blog-content">
+                    <div class="blog-date">September 30, 2024</div>
+                    <h3 class="blog-title">My Creative Morning Ritual</h3>
+                    <p class="blog-excerpt">People often ask about my creative process, but the truth is, it starts before I even touch a computer. My morning ritual sets the tone for everything that follows—from that first cup of lavender tea to...</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-header">🌸</div>
+                <div class="blog-content">
+                    <div class="blog-date">September 12, 2024</div>
+                    <h3 class="blog-title">Lessons from My Garden</h3>
+                    <p class="blog-excerpt">My small urban garden has taught me more about design than any textbook ever could. Patience, timing, the importance of space, the beauty of imperfection—every season brings new insights...</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-header">✈️</div>
+                <div class="blog-content">
+                    <div class="blog-date">August 25, 2024</div>
+                    <h3 class="blog-title">Travel Sketches: Capturing Color Stories</h3>
+                    <p class="blog-excerpt">My latest trip to the lavender fields of Provence wasn't just a vacation—it was a masterclass in color harmony. I came back with a sketchbook full of purple gradients and a heart full of inspiration...</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-card" style="text-align: center; margin-top: 3rem;">
+            <h2>Stay Connected</h2>
+            <p>If these thoughts resonate with you, I'd love to hear from you. Drop me a line and let's start a conversation about creativity, design, or anything that sparks your curiosity.</p>
+            <a href="contact.html" class="cta-button" style="margin-top: 1rem; display: inline-block;">Get In Touch</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:hello@marydw.com" aria-label="Email">✉</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+            </div>
+            <p>&copy; 2024 Mary DW. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
